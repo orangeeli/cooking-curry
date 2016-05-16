@@ -2,15 +2,14 @@
   "name": "cooking-curry",
   "version": "1.0.0",
   "description": "A curry recipe example",
-  "main": "index.js",
+  "main": "curry.js",
   "scripts": {
-    "test": "mocha"
+    "test": "gulp test:mocha"
   },
   "keywords": [
     "curry",
     "javascript",
-    "functional",
-    "programming"
+    "functional programming"
   ],
   "author": "Eliseu Martinho",
   "license": "MIT",

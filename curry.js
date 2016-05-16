@@ -5,7 +5,7 @@
   mod.exports = function cook(f, args) {
     args = args || [];
 
-    // Once the number of arguments is the same as of the original functional, call the function.
+    // Once the number of arguments is the same as of the original function, call the function.
     if (args.length === f.length){
       // Just passing null because the context is not important
       return f.apply(null, args);
