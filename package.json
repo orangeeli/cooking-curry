@@ -1,0 +1,23 @@
+{
+  "name": "cooking-curry",
+  "version": "1.0.0",
+  "description": "A curry recipe example",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "curry",
+    "javascript",
+    "functional",
+    "programming"
+  ],
+  "author": "Eliseu Martinho",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-mocha": "^2.2.0",
+    "mocha": "^2.4.5"
+  }
+}
