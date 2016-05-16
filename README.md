@@ -24,7 +24,13 @@ In javascript this can be achieved, for example, with the [bind](https://develop
 As for the clojure example, the use case I had was the handling of the error function when working with Parse's javascript SDK promises.
 Again, in order to improve code readability, instead of writing the callback function directly as one of the arguments of the _then_, I wrote something like this
 
-<script src="https://gist.github.com/orangeeli/2cab4dbf81bfe489d6b3fb73703593f9.js"></script>
+```javascript
+function handleError (res, message) {
+  return function (error) {
+    res.json(`${message} ${JSON.stringify(error)}`);
+  }
+};
+```
 
 Still have to figure out a use case for Function Currying, yet in the mean time I have this small project to play around with the technique and understand a little bit more.
 
