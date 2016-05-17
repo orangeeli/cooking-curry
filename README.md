@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/orangeeli/cooking-curry.svg?branch=master)](https://travis-ci.org/orangeeli/cooking-curry) [![Code Climate](https://codeclimate.com/github/orangeeli/cooking-curry/badges/gpa.svg)](https://codeclimate.com/github/orangeeli/cooking-curry)
+
 # Cooking Curry
 This is a small project to play around with function currying. The original code can be found [here](https://gist.github.com/lovasoa/e9c51b84ead1ae0b2659).
 I've just made a few changes to improve readability:
