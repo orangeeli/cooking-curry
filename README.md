@@ -4,11 +4,15 @@
 This is a small project to play around with function currying. The original code can be found [here](https://gist.github.com/lovasoa/e9c51b84ead1ae0b2659).
 I've just made a few changes to improve readability:
 
-1. Replaced the first _if_ for the logical _OR_.
+1. Replaced the first _if_ ~~for the logical _OR_~~ ES6 default parameter.
 ```javascript
-args = args || [];
+function cook(f, args=[]) {
+# args = args || [];
+(...)
+}
 ```
 2. Removed the *context* argument. I just wanted to _curry_ the function without thinking about which scope I'm working with.
+3. You'll [node 6](http://node.green/) to run this project.
 
 ## A bit of context
 
