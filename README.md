@@ -13,6 +13,10 @@ function cook(f, args=[]) {
 ```
 2. Removed the *context* argument. I just wanted to _curry_ the function without thinking about which scope I'm working with.
 3. You'll [node 6](http://node.green/) to run this project.
+4. Function Generators and Iterators on tests FTW!
+  * [Generators in JavaScript - What, Why and How - FunFunFunction #34](https://www.youtube.com/watch?v=ategZqxHkz4)
+  * [7 Surprising Things I Learned Writing a Fibonacci Generator in JavaScript](https://medium.com/javascript-scene/7-surprising-things-i-learned-writing-a-fibonacci-generator-4886a5c87710#.3j2w7re5r)
+
 
 ## A bit of context
 
