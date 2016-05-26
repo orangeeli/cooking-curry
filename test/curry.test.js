@@ -32,27 +32,37 @@
     it("should return y when on (x)*n: Arity n", ()=>{
 
       const maxArgs = Math.floor(Math.random() * 11),
-        args = [];
+        args = [], parameters=[];
 
       for(let i = 0; i<maxArgs;i+=1){
         args.push(Math.floor(Math.random() * 12));
+        parameters.push(`p${i}`);
       }
 
       const expected = _.reduce(args, (sum, n)=>sum + n, 0);
 
+      const toCurry = `(${parameters.join(",")})=>_.reduce([${parameters}], (sum, n)=>sum + n, 0)`;
+      console.log(`To curry: ${toCurry}`);
+
+      let curried = curry(eval(toCurry));
+
+      console.log("curried: " + curried);
+
       function *createIterator(curried, args) {
+        let temp = curried;
         for (let i = 0, length=args.length; i < length; i+=1) {
-          yield curried(args[i]);
+          console.log(`Args ${args[i]} at ${i}`);
+          temp = temp(args[i]);
         }
+        yield temp;
       }
 
-      let curried = curry(a=>_.reduce(a, (sum, n)=>sum + n, 0)),
-        result = 0,
+      let result,
         iterator = createIterator(curried, args);
 
-      for (let value of iterator) {
-        result+=value;
-      }
+      console.log(args);
+
+      result = iterator.next().value;
 
       assert.equal(expected, result);
     });
