@@ -7,8 +7,8 @@ I've just made a few changes to improve readability:
 1. Replaced the first _if_ ~~for the logical _OR_~~ ES6 default parameter.
 ```javascript
 function cook(f, args=[]) {
-# args = args || [];
-(...)
+// args = args || [];
+//(...)
 }
 ```
 2. Removed the *context* argument. I just wanted to _curry_ the function without thinking about which scope I'm working with.
