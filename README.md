@@ -12,7 +12,7 @@ function cook(f, args=[]) {
 }
 ```
 2. Removed the *context* argument. I just wanted to _curry_ the function without thinking about which scope I'm working with.
-3. You'll [node 6](http://node.green/) to run this project.
+3. You'll need [node 6](http://node.green/) to run this project.
 4. Function Generators and Iterators on tests FTW!
   * [Generators in JavaScript - What, Why and How - FunFunFunction #34](https://www.youtube.com/watch?v=ategZqxHkz4)
   * [7 Surprising Things I Learned Writing a Fibonacci Generator in JavaScript](https://medium.com/javascript-scene/7-surprising-things-i-learned-writing-a-fibonacci-generator-4886a5c87710#.3j2w7re5r)
@@ -21,9 +21,9 @@ function cook(f, args=[]) {
 ## A bit of context
 
 Function Currying is a technique where you can take a function with _n_ arguments and transform it into a series of functions (n to be precise) with arity 1.
-The technique is named after his [Haskel Curry](https://en.wikipedia.org/wiki/Currying), according to Wikipedia, still have to confirm this with more sources.
+The technique is named after his creator [Haskel Curry](https://en.wikipedia.org/wiki/Currying), according to Wikipedia. Still have to confirm this with more sources.
 [Haskell has this for free](https://wiki.haskell.org/Currying) for every function. I'm still trying to figure out a use case for this technique because
-every use case that I thought I was using Currying, I was actually using Partial Application or just creating a clojure to
+every use case that I thought I was using Currying, I was actually using Partial Application or just creating a clojure
 to return a function that has access to that scope.
 
 The difference between partial application and Currying is that with partial application you take a function with _n_ arguments and you transform it into a function with fewer arguments.
